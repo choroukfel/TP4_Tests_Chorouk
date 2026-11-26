@@ -184,14 +184,14 @@ public class TestRoutage {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("\n=== Conversation avec routage ===");
-        System.out.println("Tapez 'quit' pour terminer.");
+        System.out.println("Tapez 'fin' pour terminer.");
 
         while (true) {
 
             System.out.print("\nVotre question : ");
             String question = scanner.nextLine().trim();
 
-            if (question.equalsIgnoreCase("quit")) {
+            if (question.equalsIgnoreCase("fin")) {
                 System.out.println("Fin de la conversation.");
                 break;
             }
