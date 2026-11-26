@@ -173,17 +173,24 @@ public class Test4 {
         // PHASE 5 : ROUTAGE PDF + WEB
         // ==========================================
 
-        System.out.println("\n=== Routage PDF + Web ===");
+//        System.out.println("\n=== Routage PDF + Web ===");
 
 
         // Routage intelligent : déterminer si la question concerne l'IA
+//        PromptTemplate promptTemplate = PromptTemplate.from(
+//                "Est-ce que la question suivante porte sur " +
+//                        "l'intelligence artificielle ?\n" +
+//                        "Question : {{question}}\n" +
+//                        "Réponds seulement par oui, non ou peut-être."
+//        );
         PromptTemplate promptTemplate = PromptTemplate.from(
-                "Est-ce que la question suivante porte sur " +
-                        "l'intelligence artificielle ?\n" +
+                "La question suivante concerne-t-elle le contenu " +
+                        "d'un support de cours sur l'intelligence artificielle, " +
+                        "le fine-tuning et le RAG ?\n" +
                         "Question : {{question}}\n" +
-                        "Réponds seulement par oui, non ou peut-être."
+                        "Réponds uniquement par oui, non ou peut-être."
         );
-
+//
         QueryRouter queryRouter = new QueryRouter() {
 
             @Override
